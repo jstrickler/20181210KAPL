@@ -1,6 +1,7 @@
 #!/usr/bin/env python
-
+import shutil
 from zipfile import ZipFile, ZIP_DEFLATED
+from tarfile import TarFile
 import os.path
 
 # reading & extracting
@@ -16,3 +17,7 @@ for base in "parrot tyger knights alice poe_sonnet spam".split():
     filename = os.path.join("../DATA", base + '.txt')
     print("adding {} as {}".format(filename, base + '.txt'))
     wzip.write(filename, base + '.txt')  # <6>
+
+# t = TarFile('junk.tar', 'w')
+# t.add('EXAMPLES/variables.py')
+# t.close()

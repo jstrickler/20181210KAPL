@@ -12,5 +12,5 @@ def mark_word(m):
 with open('../DATA/parrot.txt') as parrot_in:
     with open('bigwords.txt', 'w') as bigwords_out:
         for line in parrot_in:
-            new_line = rx_longword.sub(mark_word, line)
+            new_line = rx_longword.sub(r"**\g<0>**", line)
             bigwords_out.write(new_line)

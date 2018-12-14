@@ -1,10 +1,11 @@
 #!/usr/bin/env python
 import smtplib  # <1>
+from getpass import getpass
 
 DEBUG = True  # set to false for production
 
 smtp_user = 'pythonclass'
-smtp_pwd = 'pythonr0xx'
+smtp_pwd = getpass("Enter password: ")
 
 sender = 'jstrick@mindspring.com'
 recipients = ['jstrickler@gmail.com']

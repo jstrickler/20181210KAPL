@@ -16,15 +16,16 @@ if re.search(pattern, s):  # <2>
     print("Found pattern.")
 print()
 
-m = re.search(pattern, s)  # <3>
+m = re.search(pattern, s)  # <3> # find first match
 print(m)
 if m:
-    print("Found:", m.group(0))  # <4>
+    print("Found:", m.group(0))  # <4>  FULL MATCH
+    print(m.start(), m.end(0), m.span())
 print()
 
-for m in re.finditer(pattern, s):  # <5>
+for m in re.finditer(pattern, s):  # <5> # find all matches as match objects
     print(m.group())
 print()
 
-matches = re.findall(pattern, s)  # <6>
+matches = re.findall(pattern, s)  # <6> find all matches as strings
 print("matches:", matches)
