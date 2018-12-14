@@ -3,10 +3,10 @@ import numpy as np
 
 a = np.array(
     [
-        [5, 10, 15],
+        [5.0, 10, 15],
         [2, 4, 6],
         [3, 6, 9, ],
-    ]
+    ], dtype=np.float64
 )  # <1>
 
 b = np.array(
@@ -27,8 +27,8 @@ print("a * 10")
 print(a * 10)  # <3>
 print()
 
-print("a + b")
-print(a + b)  # <4>
+print("a // b")
+print(a // b)  # <4>
 print()
 
 print("b + 3")
@@ -42,3 +42,6 @@ print()
 
 a += 1000  # <7>
 print(a)
+
+print("a @ b", a @ b)
+
